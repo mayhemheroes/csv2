@@ -1,0 +1,12 @@
+project: csv2
+target: fuzz_csv2parse
+image: ghcr.io/johnyu763/csv2:latest
+tasks:
+  - name: exploitability_factors
+  - name: behavior_testing
+  - name: regression_testing
+  - name: coverage_analysis
+cmds:
+    - cmd: /fuzz_csv2parse
+testsuite:
+    - file:///testsuite
